@@ -2,8 +2,8 @@ import React from 'react';
 import {AppBar, Box, Button, IconButton, Link, Typography} from "@mui/material";
 import '@fontsource-variable/inter';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LightModeIcon from '@mui/icons-material/LightMode';
 import {palette} from "../themes/palette";
+import {BiSun} from "react-icons/bi";
 
 const localStyles = {
     navbar: {
@@ -34,9 +34,20 @@ const localStyles = {
     navbarLinks: {
         alignItems: "flex-start",
         display: "flex",
+        fontSize: "16px",
         gap: "30px",
         position: "relative",
         width: "fit-content",
+    },
+    navbarLink : {
+        color: palette.black.main,
+        transition: "transform 0.1s ease-in-out",
+        '&:hover': {
+            color: palette.primary.main,
+            //slide the icon up when hovered and back down when not hovered
+            transform: "translateY(-1.5px)",
+            transition: "transform 0.1s ease-in-out",
+        },
     },
     leftText: {
         color: palette.black.main,
@@ -64,20 +75,20 @@ const NavigationBar = () => {
         <AppBar color="transparent" elevation={0} sx={localStyles.navbar}>
             <Box sx={localStyles.navbarLeft}>
                 {/*<Box component="img" src={"./w.svg"} alt={"logo"} sx={localStyles.logo}/>*/}
-                <Typography variant="h6" sx={localStyles.leftText} children={"Marcos"}></Typography>
+                <Typography variant="h6" sx={localStyles.leftText} children={"mtraverso.net"}></Typography>
             </Box>
             <Box sx={localStyles.navbarRight}>
                 <Box sx={localStyles.navbarLinks}>
-                    <Link href={"#"} underline={"none"} color="inherit">Home</Link>
-                    <Link href={"#"} underline={"none"} color="inherit">About</Link>
-                    <Link href={"#"} underline={"none"} color="inherit">Works</Link>
+                    <Link href={"#"} underline={"none"} sx={localStyles.navbarLink}>Home</Link>
+                    <Link href={"#"} underline={"none"} sx={localStyles.navbarLink}>About</Link>
+                    <Link href={"#"} underline={"none"} sx={localStyles.navbarLink}>Works</Link>
                 </Box>
 
                 <IconButton aria-label="github" color="inherit" href="https://github.com/mtraverso3" target="_blank">
                     <GitHubIcon/>
                 </IconButton>
                 <IconButton aria-label="dark mode" color="inherit">
-                    <LightModeIcon/>
+                    <BiSun/>
                 </IconButton>
                 <Button variant="contained" color="primary" href={"mailto:hello@mtraverso.net"}>Contact
                     me {'\u2192'}</Button>
