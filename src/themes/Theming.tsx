@@ -1,6 +1,8 @@
 import {PropsWithChildren} from "react";
 import {createTheme, CssBaseline, darken, ThemeProvider} from "@mui/material";
 import {palette} from "./palette";
+import '@fontsource-variable/inconsolata';
+import '@fontsource-variable/inter';
 
 export const theme = createTheme({
     typography: {

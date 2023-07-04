@@ -18,5 +18,8 @@ export const palette = {
         main: '#060504',
         light: '#120F0C',
         dark: '#000000',
+    },
+    background: {
+        default: "#EFF2F5",
     }
 }
