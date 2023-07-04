@@ -1,4 +1,4 @@
-import {Box, Typography} from "@mui/material";
+import {Box, darken, Typography} from "@mui/material";
 import {palette} from "../themes/palette";
 import {
     BiLogoAws,
@@ -47,7 +47,7 @@ const localStyles = {
         color: "#898989",
         fontFamily: "Inter Variable",
         fontSize: "24px",
-        fontWeight: 700,
+        fontWeight: 600,
         letterSpacing: 0,
         lineHeight: "31px",
         position: "relative",
@@ -76,6 +76,12 @@ const localStyles = {
         padding: "3px 8px",
         position: "relative",
         width: "fit-content",
+        transition: "background-color 0.1s ease-in-out, transform 0.1s ease-in-out",
+        '&:hover': {
+            backgroundColor: darken(palette.white.dark, 0.03),
+            transform: "translateY(-0.7px)",
+            transition: "background-color 0.1s ease-in-out, transform 0.1s ease-in-out",
+        }
     },
     technologyText: {
         color: palette.black.main,
@@ -92,8 +98,6 @@ const localStyles = {
 
 }
 const Hero = () => {
-
-
     return (
             <Box sx={localStyles.heroWrapper}>
                 <Box sx={localStyles.hero}>
