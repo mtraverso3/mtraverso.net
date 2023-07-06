@@ -3,6 +3,7 @@ import {Box} from "@mui/material";
 import React from "react";
 import {palette} from "../themes/palette";
 import Hero from "./Hero";
+import Experience from "./Experience";
 
 const localStyles = {
     desktopVersion: {
@@ -19,6 +20,7 @@ const Homepage = () => {
         <Box sx={localStyles.desktopVersion}>
             <NavigationBar/>
             <Hero/>
+            <Experience/>
         </Box>);
 };
 
