@@ -12,6 +12,7 @@ import {
 import {PiFileSql} from "react-icons/pi";
 
 const localStyles = {
+
     heroWrapper: {
         backgroundColor: "transparent",
         display: "flex",
@@ -76,6 +77,7 @@ const localStyles = {
         padding: "3px 8px",
         position: "relative",
         width: "fit-content",
+        cursor: "default",
         transition: "background-color 0.1s ease-in-out, transform 0.1s ease-in-out",
         '&:hover': {
             backgroundColor: darken(palette.white.dark, 0.03),
@@ -95,22 +97,24 @@ const localStyles = {
         whiteSpace: "nowrap",
         width: "fit-content",
     }
-
 }
 const Hero = () => {
     return (
-            <Box sx={localStyles.heroWrapper}>
-                <Box sx={localStyles.hero}>
+        <Box sx={localStyles.heroWrapper}>
+            <Box sx={localStyles.hero}>
                 <Typography variant="h1" sx={localStyles.heroText}>
-                    Hello I'm <br />
+                    Hello I'm <br/>
                     Marcos Traverso
                 </Typography>
                 <Typography variant="h2" sx={localStyles.heroInfoText}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
                 </Typography>
-                <Technologies />
+                <Technologies/>
             </Box>
         </Box>);
 };

@@ -16,6 +16,13 @@ const localStyles = {
         position: "relative",
         width: "80%",
         flexDirection: "row",
+        boxShadow: "1px 1px 8px 0px rgba(0,0,0,0.1)",
+        borderRadius: "0px 0px 8px 8px",
+        transition: "box-shadow 0.1s ease-in-out",
+        "&:hover": {
+            boxShadow: "1px 1px 8px 0px rgba(0,0,0,0.2)",
+            transition: "box-shadow 0.1s ease-in-out",
+        }
     },
     navbarLeft: {
         alignItems: "center",
@@ -70,8 +77,6 @@ const localStyles = {
 
 const NavigationBar = () => {
     return (
-        // <Box sx={localStyles.header}>
-
         <AppBar color="transparent" elevation={0} sx={localStyles.navbar}>
             <Box sx={localStyles.navbarLeft}>
                 {/*<Box component="img" src={"./w.svg"} alt={"logo"} sx={localStyles.logo}/>*/}
@@ -95,7 +100,6 @@ const NavigationBar = () => {
 
             </Box>
         </AppBar>
-        // </Box>
     );
 }
 
